@@ -39,7 +39,7 @@
  */
 
 //Define a version string of your firmware here
-#define VER 1.19.R
+#define VER 1.19.RK
 
 /* Entries must be ordered as follows:
    1. Saveable parameters (id != 0)
@@ -54,8 +54,8 @@
     PARAM_ENTRY(CAT_CHARGER, iaclim,      "A",       0,      72,     16,     10  ) \
     PARAM_ENTRY(CAT_CHARGER, idcspnt,     "A",       0,      45,     45,     9   ) \
     PARAM_ENTRY(CAT_CHARGER, chargerena,  CHARGERS,  1,      7,      7,      4   ) \
-    PARAM_ENTRY(CAT_CHARGER, udcspnt,     "V",       50,     420,    403,    5   ) \
-    PARAM_ENTRY(CAT_CHARGER, udclim,      "V",       50,     420,    398,    6   ) \
+    PARAM_ENTRY(CAT_CHARGER, udcspnt,     "V",       220,     420,    403,    5   ) \
+    PARAM_ENTRY(CAT_CHARGER, udclim,      "V",       220,     420,    398,    6   ) \
     PARAM_ENTRY(CAT_CHARGER, timelim,     "minutes", -1,     10000,  -1,     16  ) \
     PARAM_ENTRY(CAT_CHARGER, timedly,     "minutes", -1,     10000,  -1,     22  ) \
     PARAM_ENTRY(CAT_CHARGER, inputype,    INPUTS,    0,      5,      1,      17  ) \

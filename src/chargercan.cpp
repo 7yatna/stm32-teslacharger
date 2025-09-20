@@ -57,6 +57,7 @@ void ChargerCAN::MapMessages(CanMap* can)
    /***** CHAdeMO RX *****/
    can->AddRecv(Param::canenable, 0x102, 40, 1, 1);
    can->AddRecv(Param::idcspnt,   0x102, 24, 8, 1);
+   can->AddRecv(Param::iaclim,   0x102, 32, 8, 1);
    can->AddRecv(Param::udclim,    0x102, 8, 16, 1);
    can->AddRecv(Param::soc,       0x102, 48, 8, 1);
 
