@@ -57,6 +57,7 @@ void ChargerCAN::MapMessages(CanMap* can)
    /***** CHAdeMO RX *****/
    can->AddRecv(Param::canenable, 0x102, 40, 1, 1);
    can->AddRecv(Param::idcspnt,   0x102, 24, 8, 1);
+   can->AddRecv(Param::iaclim,   0x102, 32, 8, 1);
    can->AddRecv(Param::udclim,    0x102, 8, 16, 1);
    can->AddRecv(Param::soc,       0x102, 48, 8, 1);
 
@@ -94,9 +95,10 @@ void ChargerCAN::MapMessages(CanMap* can)
    can->AddSend(Param::version, 0x368, 56, 8, 0, (int8_t)0xff);
 
    /***** CHAdeMO TX *****/
-   can->AddSend(Param::version, 0x108, 8, 16, 107); //output 428V max = 4*107
-   can->AddSend(Param::idclim, 0x108, 24, 8, 1);
-   can->AddSend(Param::udc, 0x109, 8, 16, 1);
-   can->AddSend(Param::idc, 0x109, 24, 16, 1);
-   can->AddSend(Param::opmode, 0x109, 40, 3, 5); //Set charging and connlock at once
+   //can->AddSend(Param::version, 0x108, 8, 16, 107); //output 428V max = 4*107
+   //can->AddSend(Param::idclim, 0x108, 24, 8, 1);
+   //can->AddSend(Param::udc, 0x109, 8, 16, 1);
+   //can->AddSend(Param::idc, 0x109, 24, 16, 1);
+   //can->AddSend(Param::opmode, 0x109, 40, 3, 5); //Set charging and connlock at once
+   can->AddSend(Param::opmode, 0x119, 40, 3, 5); // ZombieVerter HVRequest
 }

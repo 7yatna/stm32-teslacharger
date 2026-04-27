@@ -166,7 +166,7 @@ extern "C" int main(void)
    CanMap cm(&c);
    canMap = &cm;
    CanSdo sdo(&c, &cm);
-   sdo.SetNodeId(2);
+   sdo.SetNodeId(Param::GetInt(Param::NodeId));
 
    TerminalCommands::SetCanMap(&cm);
 
