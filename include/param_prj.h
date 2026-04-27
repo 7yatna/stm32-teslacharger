@@ -39,14 +39,14 @@
  */
 
 //Define a version string of your firmware here
-#define VER 1.19.RK
+#define VER 1.20.RK
 
 /* Entries must be ordered as follows:
    1. Saveable parameters (id != 0)
    2. Temporary parameters (id = 0)
    3. Display values
  */
-//Next param id (increase when adding new parameter!): 23
+//Next param id (increase when adding new parameter!): 24
 //Next value Id: 2051
 /*              category     name         unit       min     max     default id */
 #define PARAM_LIST \
@@ -63,7 +63,8 @@
     PARAM_ENTRY(CAT_CHARGER, enablepol,   POLARITIES,0,      1,      0,      18  ) \
     PARAM_ENTRY(CAT_CHARGER, idckp,       "",        0,      10000,  1,      20  ) \
     PARAM_ENTRY(CAT_CHARGER, idcki,       "",        0,      10000,  10,     21  ) \
-    VALUE_ENTRY(state,       STATES,  2043 ) \
+	PARAM_ENTRY(CAT_CHARGER, NodeId,       "",        0,      64,  10,     	 23  ) \
+	VALUE_ENTRY(state,       STATES,  2043 ) \
     VALUE_ENTRY(uptime,      "s",     2048 ) \
     VALUE_ENTRY(lasterr,     errorListString,  2002 ) \
     VALUE_ENTRY(uaux,        "V",     2049 ) \

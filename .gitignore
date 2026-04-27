@@ -4,3 +4,5 @@ stm32_charger*
 linker.map
 *.layout
 *.out
+libopencm3
+libopeninv
